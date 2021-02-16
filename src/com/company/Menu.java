@@ -1,6 +1,11 @@
 package com.company;
 
 public class Menu {
+
+    /**
+     * @param
+     * @return
+     */
     public static String prompt_FirstName() {
         String firstName = "First Name:";
         System.out.println(firstName);
@@ -9,12 +14,21 @@ public class Menu {
         //The same is true for the rest of the methods
     }
 
+    /**
+     *@param
+     *@return
+     */
     public static String prompt_LastName() {
         String lastName = "Last Name:";
         System.out.println(lastName);
         return (lastName);
     }
 
+    /**
+     *
+     *@param
+     *@return
+     */
     public static String prompt_Street() {
         String street = "Street:";
         System.out.println(street);
