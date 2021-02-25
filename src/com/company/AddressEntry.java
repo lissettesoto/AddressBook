@@ -1,22 +1,43 @@
-package com.company;
+//AddressEntry - this class represents a single Address/Contact information entry in the AddressBook
+//        It should contain contructors, at least one constructor…one that accepts a first, last name, street, city, state, zip, email, phone.
+//        contain separate class varaibles representing all the information in an AddressEntry contact.
+//        It should cotain a toString() method that returns a nicely formats a string containing all contact information for printing to console
+//        It should contain setX() and getX() methods where X are
+//done
 
+
+/**
+ *
+ */
+package com.company;
+/**
+ * private variables
+ */
 public class AddressEntry {
     private String firstname;
     private String lastname;
     private String street;
     private String city;
     private String state;
-    private int zip;
-    private String telephone;
+    private String zip;
     private String email;
+    private String telephone;
 
-
-    //generating constructor
-    AddressEntry (String firstname, String lastname, String street, String city, String state, int zip, String email, String telephone){
-        super();
-        this.firstname=firstname;
-        this.lastname=lastname;
-        this.street=street;
+    /**
+     *class constructor
+     * @param firstname: first name of the contact
+     * @param lastname: last name of the contact
+     * @param street: the street and house number associated with the contact in the US
+     * @param city: the city associated with the address in the US
+     * @param state: the US state associated with the address
+     * @param zip: the zip code associated with the address in the US
+     * @param email: email the user wants to have on record for their contact
+     * @param telephone: phone number the user has for their contact
+     */
+    public AddressEntry(String firstname, String lastname, String street, String city, String state, String zip, String email, String telephone) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.street = street;
         this.city = city;
         this.state = state;
         this.zip = zip;
@@ -24,62 +45,62 @@ public class AddressEntry {
         this.telephone = telephone;
     }
 
+    public AddressEntry() {
 
-    //generating setters and getters
-    public String getFirstname() {
-        return firstname;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    /**
+     * gets first name
+     * @return: returns the first name
+     */
+    public String getFirstname() { return firstname; }
+
+    /**
+     * sets the first name
+     * @param firstname the first name set by the user however they desire
+     */
+    public static void setFirstname(String firstname) {
+        firstname = firstname;
     }
 
     public String getLastname() {
         return lastname;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public static void setLastname(String lastname) {
+        lastname = lastname;
     }
 
     public String getStreet() {
         return street;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
+    public static void setStreet(String street) {
+        street = street;
     }
 
     public String getCity() {
         return city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public static void setCity(String city) {
+        city = city;
     }
 
     public String getState() {
         return state;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public static void setState(String state) {
+        state = state;
     }
 
-    public int getZip() {
+    public String getZip() {
         return zip;
     }
 
-    public void setZip(int zip) {
-        this.zip = zip;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
+    public static void setZip(String zip) {
+        zip = zip;
     }
 
     public String getEmail() {
@@ -87,9 +108,16 @@ public class AddressEntry {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        email = email;
     }
 
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephoneNumber(String telephone) {
+        telephone = telephone;
+    }
 
     @Override
     public String toString() {
@@ -99,21 +127,14 @@ public class AddressEntry {
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", telephone='" + telephone + '\'' +
+                ", zip='" + zip + '\'' +
                 ", email='" + email + '\'' +
+                ", telephone='" + telephone + '\'' +
                 '}';
     }
-
-//    AddressEntry(){
-//        firstname = " ";
-//        lastname = " ";
-//        street = " ";
-//        city = " ";
-//        state = " ";
-//        zip = 00001;
-//        email = " ";
-//        telephone = " ";
-//    }
-
 }
+
+
+
+
+
